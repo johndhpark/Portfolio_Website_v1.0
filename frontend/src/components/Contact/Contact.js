@@ -149,7 +149,12 @@ class Contact extends Component {
           contact me and say hi.
         </Content>
         <Container>
-          <Form name="contact" className="form" onSubmit={this.handleSubmit}>
+          <Form
+            name="contact"
+            className="form"
+            onSubmit={this.handleSubmit}
+            netlify
+          >
             <Name
               type="text"
               name="name"
