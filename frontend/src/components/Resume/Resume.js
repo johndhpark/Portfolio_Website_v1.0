@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import resume from "../../assets/images/John_DH_Park_Resume_Frontend_Engineer.pdf";
 
 const Container = styled.div`
   position: absolute;
@@ -18,7 +17,10 @@ const Viewer = styled.embed`
 const Resume = props => {
   return (
     <Container>
-      <Viewer src={resume} title="John DH. Park Resume" />
+      <Viewer
+        src="../../assets/images/John_DH_Park_Resume_Frontend_Engineer.pdf"
+        title="John DH. Park Resume"
+      />
     </Container>
   );
 };
