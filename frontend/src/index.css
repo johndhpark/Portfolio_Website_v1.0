@@ -2,6 +2,10 @@
 @import url("./assets/css/fontawesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 div,

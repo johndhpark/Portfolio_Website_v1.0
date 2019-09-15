@@ -31,9 +31,11 @@ const NavBar = props => {
 
   return (
     <NavList className={className}>
-      <NavLink className={className} loc="#home">
-        HOME
-      </NavLink>
+      {className === "menu" ? null : (
+        <NavLink className={className} loc="#home">
+          HOME
+        </NavLink>
+      )}
       <NavLink className={className} loc="#about">
         ABOUT
       </NavLink>

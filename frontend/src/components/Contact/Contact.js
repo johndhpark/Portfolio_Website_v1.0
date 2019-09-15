@@ -186,7 +186,6 @@ class Contact extends Component {
               type="reset"
               value="Clear"
               onClick={this.clearInputs}
-              onPress={this.clearInputs}
             />
           </Form>
         </Container>

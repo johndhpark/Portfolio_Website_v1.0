@@ -15,6 +15,7 @@ const Container = styled.header`
   align-items: flex-end;
 
   @media screen and (max-width: 1399px) {
+    /* transform: translateX(-100%); */
     display: none;
   }
 `;
@@ -58,7 +59,7 @@ const Headline = styled.p`
 
 const Menu = props => {
   return (
-    <Container id="home" className="menu">
+    <Container className="menu">
       <Middle>
         <Icon src={rocket} />
         <Name className="name">JOHN DH. PARK</Name>
