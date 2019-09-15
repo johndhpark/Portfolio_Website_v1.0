@@ -136,7 +136,7 @@ class Contact extends Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
-        alert("Thank you! I will try to get back to you as soon as possible!");
+        alert("Thank you! I will try to get back to you as soon as possible.");
         this.setState({ name: "", email: "", message: "" });
       })
       .catch(error => alert(error));
