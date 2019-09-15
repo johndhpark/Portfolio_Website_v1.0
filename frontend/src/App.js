@@ -4,6 +4,10 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Resume from "./components/Resume/Resume";
 
+const Resume = React.lazy(() => {
+  return import("./components/Resume/Resume");
+});
+
 function App() {
   let routes = (
     <Switch>
@@ -13,7 +17,11 @@ function App() {
     </Switch>
   );
 
-  return <div>{routes}</div>;
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>{routes}</Suspense>
+    </div>
+  );
 }
 
 export default App;
