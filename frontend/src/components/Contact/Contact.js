@@ -151,6 +151,7 @@ class Contact extends Component {
         </Content>
         <Container>
           <Form onSubmit={this.handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             <Name
               type="text"
               name="name"
