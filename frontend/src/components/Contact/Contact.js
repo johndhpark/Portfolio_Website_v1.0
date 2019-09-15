@@ -149,7 +149,7 @@ class Contact extends Component {
           contact me and say hi.
         </Content>
         <Container>
-          <Form className="form" onSubmit={this.handleSubmit}>
+          <Form name="contact" className="form" onSubmit={this.handleSubmit}>
             <Name
               type="text"
               name="name"
