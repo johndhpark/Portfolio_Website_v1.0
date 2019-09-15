@@ -106,7 +106,7 @@ const Button = styled(Input)`
 
 const encode = data => {
   return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
 
@@ -149,12 +149,7 @@ class Contact extends Component {
           contact me and say hi.
         </Content>
         <Container>
-          <Form
-            name="contact"
-            className="form"
-            onSubmit={this.handleSubmit}
-            netlify
-          >
+          <Form onSubmit={this.handleSubmit}>
             <Name
               type="text"
               name="name"
