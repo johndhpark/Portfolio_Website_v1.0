@@ -129,6 +129,7 @@ class Contact extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -149,7 +150,7 @@ class Contact extends Component {
           contact me and say hi.
         </Content>
         <Container>
-          <Form onSubmit={this.handleSubmit}>
+          <Form id="contact" onSubmit={this.handleSubmit}>
             <Name
               type="text"
               name="name"
