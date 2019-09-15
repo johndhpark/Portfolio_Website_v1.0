@@ -153,7 +153,7 @@ class Contact extends Component {
           contact me and say hi.
         </Content>
         <Container>
-          <Form onSubmit={this.handleSubmit}>
+          <Form id="contact" onSubmit={this.handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <Name
               type="text"
