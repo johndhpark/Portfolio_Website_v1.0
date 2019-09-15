@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import express from "../../assets/images/express-light.svg";
+import express from "../../assets/images/express.svg";
 import graphql from "../../assets/images/graphql.svg";
 import html from "../../assets/images/html.svg";
 import javascript from "../../assets/images/javascript.svg";
-import jest from "../../assets/images/jest.svg";
 import jquery from "../../assets/images/jquery.svg";
 import mocha from "../../assets/images/mocha.svg";
 import mongodb from "../../assets/images/mongodb.svg";
@@ -58,7 +57,6 @@ class Displays extends Component {
         <Display id="mongodb" location={mongodb} />
         <Display id="graphql" location={graphql} />
         <Display id="mocha" location={mocha} />
-        <Display id="jest" location={jest} />
       </Container>
     );
   }

@@ -3,5 +3,6 @@
     "fontawesome",
     "linkedin",
     "spotify"
-  ]
+  ],
+  "git.ignoreLimitWarning": true
 }

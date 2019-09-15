@@ -41,16 +41,16 @@ const Lists = props => {
   return (
     <Container>
       <TableContainer className="container-table">
-        <List type="table" title="languages" items={languages} />
-        <List type="table" title="frameworks/libraries" items={frameworks} />
-        <List type="table" title="backend" items={backend} />
-        <List type="table" title="testing" items={testing} />
+        <List type="table" title="Languages" items={languages} />
+        <List type="table" title="Frameworks/Libraries" items={frameworks} />
+        <List type="table" title="Backend" items={backend} />
+        <List type="table" title="Testing" items={testing} />
       </TableContainer>
       <ListContainer>
-        <List type="list" title="languages" items={languages} />
-        <List type="list" title="frameworks/libraries" items={frameworks} />
-        <List type="list" title="backend" items={backend} />
-        <List type="list" title="testing" items={testing} />
+        <List type="list" title="Languages" items={languages} />
+        <List type="list" title="Frameworks/Libraries" items={frameworks} />
+        <List type="list" title="Backend" items={backend} />
+        <List type="list" title="Testing" items={testing} />
       </ListContainer>
     </Container>
   );

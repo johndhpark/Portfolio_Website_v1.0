@@ -127,6 +127,10 @@ class Contact extends Component {
     });
   };
 
+  clearInputs = () => {
+    return this.setState({ name: "", email: "", message: "" });
+  };
+
   handleSubmit = event => {
     event.preventDefault();
 
@@ -137,7 +141,7 @@ class Contact extends Component {
     })
       .then(() => {
         alert("Thank you! I will try to get back to you as soon as possible.");
-        this.setState({ name: "", email: "", message: "" });
+        this.clearInputs();
       })
       .catch(error => alert(error));
   };
@@ -177,7 +181,13 @@ class Contact extends Component {
               onChange={event => this.updateInput(event, "message")}
             />
             <Button className="submit" type="submit" value="Send" />
-            <Button className="reset" type="reset" value="Clear" />
+            <Button
+              className="reset"
+              type="reset"
+              value="Clear"
+              onClick={this.clearInputs}
+              onPress={this.clearInputs}
+            />
           </Form>
         </Container>
       </Section>
