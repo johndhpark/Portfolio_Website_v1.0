@@ -75,6 +75,7 @@ const Button = styled(Input)`
   min-width: 125px;
   transition: all 0.2s ease-in;
   border: none;
+  border-radius: 5px;
 
   &.submit {
     box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
@@ -86,9 +87,14 @@ const Button = styled(Input)`
     :focus {
       background-color: #f98780;
     }
+
+    :focus {
+      border-radius: 0px;
+    }
   }
 
   &.reset {
+    box-shadow: inset 0 0 0 1px #dddddd;
     color: var(--text-color-section-content-light);
     grid-area: reset;
 

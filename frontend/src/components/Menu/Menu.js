@@ -60,7 +60,7 @@ const Menu = props => {
     <Container id="home" className="menu">
       <Middle>
         <Icon src={rocket} />
-        <Name className="name">JOHN DH PARK</Name>
+        <Name className="name">JOHN DH. PARK</Name>
         <Title className="job-title">Front-End Engineer</Title>
         <Headline>
           Using cutting-edge web technologies to improve <br />

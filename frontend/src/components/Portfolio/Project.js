@@ -31,7 +31,7 @@ const Project = props => {
     <Article>
       <Preview />
       <Title>{name}</Title>
-      <Description>This should one an one line description.</Description>
+      <Description>Coming Soon.</Description>
     </Article>
   );
 };
