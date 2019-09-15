@@ -114,33 +114,10 @@ const Contact = props => {
         contact me and say hi.
       </Content>
       <Container>
-        <Form
-          className="form"
-          netlify-honeypot="bot-field"
-          method="POST"
-          data-netlify="true"
-        >
-          <Name
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={name}
-            onChange={event => this.updateInput(event, "name")}
-          />
-          <Email
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={event => this.updateInput(event, "email")}
-          />
-          <Message
-            name="message"
-            id=""
-            placeholder="Message"
-            value={message}
-            onChange={event => this.updateInput(event, "message")}
-          />
+        <Form className="form" method="POST" data-netlify="true">
+          <Name type="text" name="name" placeholder="Name" />
+          <Email type="email" name="email" placeholder="Email" />
+          <Message name="message" placeholder="Message" />
           <Button className="submit" type="submit" value="Send" />
           <Button className="reset" type="reset" value="Clear" />
         </Form>
