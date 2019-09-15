@@ -18,7 +18,11 @@ const Viewer = styled.embed`
 const Resume = props => {
   return (
     <Container>
-      <Viewer src={resume} title="John DH. Park Resume" />
+      <Viewer
+        src={resume}
+        type="application/pdf"
+        title="John DH. Park Resume"
+      />
     </Container>
   );
 };
