@@ -14,7 +14,7 @@ const SocialList = styled.ul`
   margin-bottom: 1em;
 
   &.banner {
-    margin-right: 0.75em;
+    padding-right: 0.75em;
   }
 `;
 
