@@ -14,21 +14,43 @@ const NavList = styled.ul`
   @media screen and (max-width: 1000px) {
     display: none;
   }
+
+  &.menu {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    margin: 0;
+  }
 `;
 
-const NavItems = props => {
+const NavBar = props => {
+  const { className } = props;
+
   return (
-    <NavList>
-      <NavLink loc="#home">HOME</NavLink>
-      <NavLink loc="#about">ABOUT</NavLink>
-      <NavLink loc="#skills">SKILLS</NavLink>
-      <NavLink loc="#portfolio">PORTFOLIO</NavLink>
-      <NavLink loc="/#contact">CONTACT</NavLink>
-      <NavLink loc="/resume" border={true}>
+    <NavList className={className}>
+      <NavLink className={className} loc="#home">
+        HOME
+      </NavLink>
+      <NavLink className={className} loc="#about">
+        ABOUT
+      </NavLink>
+      <NavLink className={className} loc="#skills">
+        SKILLS
+      </NavLink>
+      <NavLink className={className} loc="#portfolio">
+        PORTFOLIO
+      </NavLink>
+      <NavLink className={className} loc="#contact">
+        CONTACT
+      </NavLink>
+      <NavLink className={className} loc="/resume" border={true}>
         RESUME
       </NavLink>
     </NavList>
   );
 };
 
-export default NavItems;
+export default NavBar;

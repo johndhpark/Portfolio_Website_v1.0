@@ -1,7 +1,8 @@
 import {
   faGithub as gitHub,
   faLinkedin as linkedIn,
-  faTwitter as twitter
+  faTwitter as twitter,
+  faSpotify as spotify
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -10,7 +11,8 @@ import styled from "styled-components";
 const SocialList = styled.ul`
   display: flex;
   justify-content: ${props => props.justifyContent || "center"};
-  margin-right: 0.75em;
+  /* margin-right: 0.75em; */
+  margin-bottom: 1em;
 `;
 
 const SocialItem = styled.li`
@@ -32,6 +34,14 @@ const Social = props => {
   const { justifyContent } = props;
   return (
     <SocialList justifyContent={justifyContent}>
+      <SocialItem>
+        <Link
+          href="https://open.spotify.com/playlist/7yoQhYF0FlFCwY45s5TDJr?si=aPzNFDXtTI29Hro9HtqKSA"
+          alt="https://open.spotify.com/playlist/7yoQhYF0FlFCwY45s5TDJr?si=aPzNFDXtTI29Hro9HtqKSA"
+        >
+          <FontAwesomeIcon icon={spotify} />
+        </Link>
+      </SocialItem>
       <SocialItem>
         <Link
           href="https://twitter.com/JDHP13"

@@ -6,6 +6,11 @@ const Container = styled.li`
   margin-right: 25px;
   color: var(--btn-color-normal);
   font-size: 1em;
+
+  &.menu {
+    margin-right: 0;
+    margin-top: 25px;
+  }
 `;
 
 const BorderLink = styled.a`
@@ -26,6 +31,7 @@ const BorderLink = styled.a`
 const LineLink = styled.a`
   position: relative;
   cursor: pointer;
+
   :hover {
     color: #f98780;
   }
@@ -47,14 +53,14 @@ const LineLink = styled.a`
 `;
 
 const NavLink = props => {
-  const { children, loc, border } = props;
+  const { children, loc, border, className } = props;
   let link = <LineLink href={loc}>{children}</LineLink>;
 
   if (border) {
     link = <BorderLink href={loc}>{children}</BorderLink>;
   }
 
-  return <Container>{link}</Container>;
+  return <Container className={className}>{link}</Container>;
 };
 
 export default NavLink;

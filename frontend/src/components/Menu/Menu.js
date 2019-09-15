@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import rocket from "../../assets/images/rocket.svg";
 import Social from "../Social/Social";
+import NavBar from "../Navigation/NavBar";
 
 const Container = styled.header`
   background: #282b34 url("../../assets/images/overlay.png");
@@ -67,6 +68,7 @@ const Menu = props => {
           the lives of others one day at a time
         </Headline>
         <Social justifyContent="flex-end" />
+        <NavBar className="menu" />
       </Middle>
     </Container>
   );
