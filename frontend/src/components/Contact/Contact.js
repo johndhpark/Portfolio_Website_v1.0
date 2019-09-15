@@ -105,83 +105,48 @@ const Button = styled(Input)`
   }
 `;
 
-class Contact extends Component {
-  state = {
-    name: "",
-    email: "",
-    message: ""
-  };
-
-  updateInput = (event, id) => {
-    const { value } = event.target;
-    this.setState((prevState, prevProps) => {
-      return {
-        ...prevState,
-        [id]: value
-      };
-    });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    console.log("Handling submit");
-    axios
-      .post("http://localhost:5000/contact", {
-        ...this.state
-      })
-      .then(response => {
-        console.log(response.data);
-        this.setState({
-          name: "",
-          email: "",
-          message: ""
-        });
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
-
-  render() {
-    const { name, email, message } = this.state;
-
-    return (
-      <Section id="contact">
-        <Heading>Contact</Heading>
-        <Content>
-          I am always open for new opportunities and projects. Don't hesitate to
-          contact me and say hi.
-        </Content>
-        <Container>
-          <Form className="form" onSubmit={this.handleSubmit}>
-            <Name
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={name}
-              onChange={event => this.updateInput(event, "name")}
-            />
-            <Email
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={event => this.updateInput(event, "email")}
-            />
-            <Message
-              name="message"
-              id=""
-              placeholder="Message"
-              value={message}
-              onChange={event => this.updateInput(event, "message")}
-            />
-            <Button className="submit" type="submit" value="Send" />
-            <Button className="reset" type="reset" value="Clear" />
-          </Form>
-        </Container>
-      </Section>
-    );
-  }
-}
+const Contact = props => {
+  return (
+    <Section id="contact">
+      <Heading>Contact</Heading>
+      <Content>
+        I am always open for new opportunities and projects. Don't hesitate to
+        contact me and say hi.
+      </Content>
+      <Container>
+        <Form
+          className="form"
+          netlify-honeypot="bot-field"
+          method="POST"
+          data-netlify="true"
+        >
+          <Name
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={name}
+            onChange={event => this.updateInput(event, "name")}
+          />
+          <Email
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={event => this.updateInput(event, "email")}
+          />
+          <Message
+            name="message"
+            id=""
+            placeholder="Message"
+            value={message}
+            onChange={event => this.updateInput(event, "message")}
+          />
+          <Button className="submit" type="submit" value="Send" />
+          <Button className="reset" type="reset" value="Clear" />
+        </Form>
+      </Container>
+    </Section>
+  );
+};
 
 export default Contact;
