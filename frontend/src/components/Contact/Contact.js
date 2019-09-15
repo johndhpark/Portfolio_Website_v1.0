@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Section from "../Section/Section";
-import Heading from "../Section/Heading";
 import Content from "../Section/Content";
-import axios from "axios";
+import Heading from "../Section/Heading";
+import Section from "../Section/Section";
 
 const Container = styled.div`
   display: flex;
@@ -105,25 +104,80 @@ const Button = styled(Input)`
   }
 `;
 
-const Contact = props => {
-  return (
-    <Section id="contact">
-      <Heading>Contact</Heading>
-      <Content>
-        I am always open for new opportunities and projects. Don't hesitate to
-        contact me and say hi.
-      </Content>
-      <Container>
-        <Form name="contact" className="form" method="post" netlify>
-          <Name type="text" name="name" placeholder="Name" />
-          <Email type="email" name="email" placeholder="Email" />
-          <Message name="message" placeholder="Message" />
-          <Button className="submit" type="submit" value="Send" />
-          <Button className="reset" type="reset" value="Clear" />
-        </Form>
-      </Container>
-    </Section>
-  );
+const encode = data => {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join("&");
 };
+
+class Contact extends Component {
+  state = {
+    name: "",
+    email: "",
+    message: ""
+  };
+
+  updateInput = (event, id) => {
+    const { value } = event.target;
+    this.setState((prevState, prevProps) => {
+      return {
+        ...prevState,
+        [id]: value
+      };
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+  };
+
+  render() {
+    const { name, email, message } = this.state;
+
+    return (
+      <Section id="contact">
+        <Heading>Contact</Heading>
+        <Content>
+          I am always open for new opportunities and projects. Don't hesitate to
+          contact me and say hi.
+        </Content>
+        <Container>
+          <Form className="form" onSubmit={this.handleSubmit}>
+            <Name
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={name}
+              onChange={event => this.updateInput(event, "name")}
+            />
+            <Email
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={event => this.updateInput(event, "email")}
+            />
+            <Message
+              name="message"
+              id=""
+              placeholder="Message"
+              value={message}
+              onChange={event => this.updateInput(event, "message")}
+            />
+            <Button className="submit" type="submit" value="Send" />
+            <Button className="reset" type="reset" value="Clear" />
+          </Form>
+        </Container>
+      </Section>
+    );
+  }
+}
 
 export default Contact;
