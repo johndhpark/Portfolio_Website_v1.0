@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import resume from "../../assets/images/John_DH_Park_Resume_Frontend_Engineer.pdf";
 
-const Viewer = styled.embed`
+const Viewer = styled.iframe`
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +11,11 @@ const Viewer = styled.embed`
 
 const Resume = props => {
   return (
-    <Viewer src={resume} type="application/pdf" title="John DH. Park Resume" />
+    <Viewer
+      src="https://drive.google.com/file/d/1_JlDcf6oxZWmiL5VRHk6k6KqktI8SgaG/preview"
+      width="640"
+      height="480"
+    ></Viewer>
   );
 };
 
