@@ -142,7 +142,7 @@ class Contact extends Component {
     const { name, email, message } = this.state;
 
     return (
-      <Section id="contact">
+      <Section>
         <Heading>Contact</Heading>
         <Content>
           I am always open for new opportunities and projects. Don't hesitate to
