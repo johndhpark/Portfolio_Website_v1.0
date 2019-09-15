@@ -63,7 +63,7 @@ const Banner = props => {
           Using cutting-edge web technologies to improve <br />
           the lives of others one day at a time
         </Headline>
-        <Social align="center" />
+        <Social className="banner" align="center" />
       </Middle>
     </Container>
   );

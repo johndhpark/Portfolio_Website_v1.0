@@ -11,8 +11,11 @@ import styled from "styled-components";
 const SocialList = styled.ul`
   display: flex;
   justify-content: ${props => props.justifyContent || "center"};
-  /* margin-right: 0.75em; */
   margin-bottom: 1em;
+
+  &.banner {
+    margin-right: 0.75em;
+  }
 `;
 
 const SocialItem = styled.li`
@@ -31,9 +34,9 @@ const Link = styled.a`
 `;
 
 const Social = props => {
-  const { justifyContent } = props;
+  const { justifyContent, className } = props;
   return (
-    <SocialList justifyContent={justifyContent}>
+    <SocialList justifyContent={justifyContent} className={className}>
       <SocialItem>
         <Link
           href="https://open.spotify.com/playlist/7yoQhYF0FlFCwY45s5TDJr?si=aPzNFDXtTI29Hro9HtqKSA"
