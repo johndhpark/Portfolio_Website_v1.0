@@ -2,10 +2,7 @@ import React, { Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/Layout/Layout";
-
-const Resume = React.lazy(() => {
-  return import("./components/Resume/Resume");
-});
+import Resume from "./components/Resume/Resume";
 
 function App() {
   let routes = (
@@ -16,11 +13,7 @@ function App() {
     </Switch>
   );
 
-  return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>{routes}</Suspense>
-    </div>
-  );
+  return <div>{routes}</div>;
 }
 
 export default App;
