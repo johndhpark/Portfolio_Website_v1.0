@@ -114,7 +114,7 @@ const Contact = props => {
         contact me and say hi.
       </Content>
       <Container>
-        <Form name="contact" className="form" method="POST" netlify>
+        <Form name="contact" className="form" method="post" netlify>
           <Name type="text" name="name" placeholder="Name" />
           <Email type="email" name="email" placeholder="Email" />
           <Message name="message" placeholder="Message" />
