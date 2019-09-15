@@ -16,10 +16,8 @@ const Container = styled.div`
 const Projects = props => {
   return (
     <Container>
-      <Project name="Burger Builder" />
-      <Project name="To Do List" />
-      <Project name="Web Scrapper" />
-      <Project name="Chat App" />
+      <Project name="Project #1" />
+      <Project name="Project #2" />
     </Container>
   );
 };

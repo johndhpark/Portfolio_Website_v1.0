@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import rocket from "../../assets/images/rocket.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub as gitHub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin as linkedIn } from "@fortawesome/free-brands-svg-icons";
+import Social from "../Social/Social";
 
 const Container = styled.header`
   background: #282b34 url("../../assets/images/overlay.png");
@@ -57,25 +55,6 @@ const Headline = styled.p`
   }
 `;
 
-const SocialList = styled.ul`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const SocialItem = styled.li``;
-
-const Link = styled.a`
-  margin-left: 0.75em;
-  font-size: 1.5em;
-
-  color: rgba(255, 255, 255, 0.5);
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #f98780;
-  }
-`;
-
 const Menu = props => {
   return (
     <Container id="home" className="menu">
@@ -87,24 +66,7 @@ const Menu = props => {
           Using cutting-edge web technologies to improve <br />
           the lives of others one day at a time
         </Headline>
-        <SocialList>
-          <SocialItem>
-            <Link
-              href="https://www.linkedin.com/in/johndhpark"
-              alt="https://www.linkedin.com/in/johndhpark"
-            >
-              <FontAwesomeIcon icon={linkedIn} />
-            </Link>
-          </SocialItem>
-          <SocialItem>
-            <Link
-              href="https://github.com/johndhpark"
-              alt="https://github.com/johndhpark"
-            >
-              <FontAwesomeIcon icon={gitHub} />
-            </Link>
-          </SocialItem>
-        </SocialList>
+        <Social justifyContent="flex-end" />
       </Middle>
     </Container>
   );

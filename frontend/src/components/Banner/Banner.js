@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import rocket from "../../assets/images/rocket.svg";
+import Social from "../Social/Social";
 
 const Container = styled.section`
   background: #282b34 url("../../assets/images/overlay.png");
@@ -62,6 +63,7 @@ const Banner = props => {
           Using cutting-edge web technologies to improve <br />
           the lives of others one day at a time
         </Headline>
+        <Social align="center" />
       </Middle>
     </Container>
   );
