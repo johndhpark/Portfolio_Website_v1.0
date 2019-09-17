@@ -12,9 +12,8 @@ const Viewer = styled.iframe`
 const Resume = props => {
   return (
     <Viewer
+      id="resume"
       src="https://drive.google.com/file/d/1_JlDcf6oxZWmiL5VRHk6k6KqktI8SgaG/preview"
-      width="640"
-      height="480"
     ></Viewer>
   );
 };

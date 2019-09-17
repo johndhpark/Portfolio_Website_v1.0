@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
-import img from "../../assets/images/project1.png";
+import img from "../../assets/images/project.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt as externalLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub as gitHub } from "@fortawesome/free-brands-svg-icons";

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Container = styled.nav`
+const Container = styled.div`
   cursor: pointer;
   font-size: 1.75em;
   margin-right: 5px;
@@ -15,12 +15,12 @@ const Container = styled.nav`
     color: var(--btn-color-hover);
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 999px) {
     display: none;
   }
 `;
 
-const DrawerButton = props => {
+const DrawerBtn = props => {
   const { clicked } = props;
   return (
     <Container onClick={clicked} onKeyPress={clicked}>
@@ -29,4 +29,4 @@ const DrawerButton = props => {
   );
 };
 
-export default DrawerButton;
+export default DrawerBtn;

@@ -16,11 +16,7 @@ function App() {
     </Switch>
   );
 
-  return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>{routes}</Suspense>
-    </div>
-  );
+  return <Suspense fallback={<div>Loading...</div>}>{routes}</Suspense>;
 }
 
 export default App;

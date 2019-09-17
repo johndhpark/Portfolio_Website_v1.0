@@ -150,14 +150,14 @@ class Contact extends Component {
     const { name, email, message } = this.state;
 
     return (
-      <Section>
+      <Section id="contact">
         <Heading>Contact</Heading>
         <Content>
           I am always open for new opportunities and projects. Don't hesitate to
           contact me and say hi.
         </Content>
         <Container>
-          <Form id="contact" onSubmit={this.handleSubmit}>
+          <Form onSubmit={this.handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <Name
               type="text"
@@ -186,6 +186,7 @@ class Contact extends Component {
               type="reset"
               value="Clear"
               onClick={this.clearInputs}
+              onKeyPress={this.clearInputs}
             />
           </Form>
         </Container>

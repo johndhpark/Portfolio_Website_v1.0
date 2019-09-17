@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import DrawerButton from "./DrawerButton";
+import DrawerBtn from "./DrawerBtn";
 import NavBar from "./NavBar";
+import DropDown from "./DropDown";
 
-const Container = styled.header`
+const Container = styled.nav`
   height: 3.7em;
   width: 100%;
   position: fixed;
@@ -17,18 +18,27 @@ const Container = styled.header`
   z-index: 90;
   background: #282b34 url("../../assets/images/overlay.png");
 
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1399px) {
     display: none;
   }
 `;
 
 const Header = props => {
-  const { drawerToggleClicked } = props;
+  const [showDropDown, setSideDrawerIsVisible] = useState(false);
+
+  const closeDropDown = () => {
+    setSideDrawerIsVisible(false);
+  };
+
+  const dropDownToggleHandler = () => {
+    setSideDrawerIsVisible(!showDropDown);
+  };
 
   return (
-    <Container>
+    <Container id="toolbar">
+      <DropDown open={showDropDown} closed={closeDropDown} />
       <NavBar />
-      <DrawerButton clicked={drawerToggleClicked} />
+      <DrawerBtn clicked={dropDownToggleHandler} />
     </Container>
   );
 };

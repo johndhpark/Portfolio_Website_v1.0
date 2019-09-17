@@ -13,9 +13,9 @@ const Container = styled.main`
   padding: 0 25px;
 `;
 
-const Main = props => {
+const Main = () => {
   return (
-    <Container>
+    <Container id="main">
       <About />
       <Skills />
       <Portfolio />

@@ -1,41 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import Banner from "../Banner/Banner";
+import Header from "../Header/Header";
 import Main from "../Main/Main";
-import Menu from "../Menu/Menu";
-import SideDrawer from "../Navigation/SideDrawer";
-import Toolbar from "../Navigation/Toolbar";
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 2fr 5fr;
 
   @media screen and (max-width: 1400px) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;
 
 const Layout = props => {
-  const [showSideDrawer, setSideDrawerIsVisible] = useState(false);
-
-  const sideDrawerClosedHandler = () => {
-    setSideDrawerIsVisible(false);
-  };
-
-  const sideDrawerToggleHandler = () => {
-    console.log(showSideDrawer);
-    setSideDrawerIsVisible(!showSideDrawer);
-  };
-
   return (
-    <Container>
-      <Toolbar drawerToggleClicked={sideDrawerToggleHandler} />
-      <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
-      <Banner />
-      <Menu />
+    <Container className="inner">
+      <Header />
       <Main />
-      {/* <Footer /> */}
     </Container>
   );
 };
