@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
-import img from "../../assets/images/project.gif";
+import img from "../../assets/images/coming-soon.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt as externalLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub as gitHub } from "@fortawesome/free-brands-svg-icons";
@@ -24,7 +24,7 @@ const Container = styled.div`
 
   :hover .overlay {
     background-color: #333333;
-    opacity: 0.35;
+    opacity: 0.75;
   }
 `;
 
