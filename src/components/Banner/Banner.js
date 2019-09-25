@@ -6,15 +6,22 @@ import styled from "styled-components";
 const Container = styled.div`
   padding-top: 6em;
   margin-bottom: 3em;
+
+  @media screen and (min-width: 1401px) {
+    flex-grow: 1;
+    padding: 15em 4em;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
 `;
 
 const Icon = styled.img`
   height: 100px;
   width: 100px;
   margin: 0 0 1.5em;
-
-  @media screen and (min-width: 1401px) {
-  }
 
   @media screen and (max-width: 785px) {
     display: none;
@@ -38,6 +45,10 @@ const Headline = styled.p`
 
   @media screen and (max-width: 585px) {
     display: none;
+  }
+
+  @media screen and (min-width: 1401px) {
+    text-align: right;
   }
 `;
 

@@ -3,6 +3,8 @@ import NavItem from "./NavItem";
 import React from "react";
 
 const NavList = styled.ul`
+  color: var(--btn-color-normal);
+  text-transform: uppercase;
   height: 100%;
   z-index: 500;
   padding-left: 25px;
@@ -10,14 +12,16 @@ const NavList = styled.ul`
   justify-content: center;
   align-items: center;
 
-  &.drop-down {
+  &.DropDown {
     color: black;
+    font-size: 1.25em;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
   }
 
-  &.side-menu {
+  &.SideMenu {
     font-size: 1.5em;
     height: 100%;
     margin: 0;
@@ -62,16 +66,12 @@ const navList = [
 ];
 
 const NavItems = props => {
-  const { classType } = props;
-  const navItems = navList.map(item => {
-    return <NavItem classType={classType} key={item.name} {...item} />;
+  const { type } = props;
+  const navItems = navList.map(itemInfo => {
+    return <NavItem key={itemInfo.name} {...itemInfo} />;
   });
 
-  return (
-    <NavList id="nav-items" className={classType}>
-      {navItems}
-    </NavList>
-  );
+  return <NavList className={type}>{navItems}</NavList>;
 };
 
 export default NavItems;

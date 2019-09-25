@@ -5,7 +5,7 @@ const Body = styled.p`
   font-size: 1.2em;
   max-width: 1200px;
   margin: 0 auto 50px;
-  padding: 25px;
+  padding: 25px 0 20px;
   text-align: center;
   color: #0b0c0c;
 `;

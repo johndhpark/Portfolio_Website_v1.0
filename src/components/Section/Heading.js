@@ -15,6 +15,7 @@ const Title = styled.h2`
   margin: 0;
   padding: 25px 0 0;
   color: #484d55;
+  font-weight: 700;
 
   &:after {
     background-color: #e97770;

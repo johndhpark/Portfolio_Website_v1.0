@@ -5,16 +5,9 @@ const Container = styled.li`
   cursor: pointer;
   margin-right: 25px;
   font-size: 1em;
-
-  &.menu {
-    margin-right: 0;
-    margin-top: 25px;
-  }
 `;
 
 const Link = styled.a`
-  text-transform: uppercase;
-
   &.underline {
     position: relative;
 
@@ -55,12 +48,12 @@ const Link = styled.a`
 `;
 
 const NavItem = props => {
-  const { name, to, attr } = props;
+  const { name, to, attr, type } = props;
   const combinedAttr = attr.join(" ");
 
   return (
     <Container>
-      <Link href={to} className={combinedAttr}>
+      <Link href={to} className={combinedAttr} type={type}>
         {name}
       </Link>
     </Container>

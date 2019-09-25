@@ -9,9 +9,10 @@ const Container = styled.nav`
 `;
 
 const NavBar = props => {
+  const { classType } = props;
   return (
     <Container id="navbar">
-      <NavItems />
+      <NavItems classType={classType} />
     </Container>
   );
 };

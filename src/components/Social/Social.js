@@ -13,7 +13,11 @@ const SocialList = styled.ul`
   justify-content: ${props => props.justifyContent || "center"};
   margin-bottom: 1em;
 
-  &.banner {
+  @media screen and (min-width: 1401px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 1400px) {
     padding-right: 0.75em;
   }
 `;

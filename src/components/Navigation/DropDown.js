@@ -41,7 +41,7 @@ const DropDown = props => {
         onClick={closed}
         onKeyPress={closed}
       >
-        <NavItems classType="drop-down" />
+        <NavItems type="DropDown" />
       </Nav>
     </>
   );

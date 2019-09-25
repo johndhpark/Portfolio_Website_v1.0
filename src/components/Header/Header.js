@@ -14,6 +14,10 @@ const Section = styled.section`
 
   @media screen and (min-width: 1401px) {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
   }
 `;
 
